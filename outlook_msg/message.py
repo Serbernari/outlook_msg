@@ -15,7 +15,7 @@ class Message:
     def subject(self):
         return self.mfs['PidTagSubject']
     
-      @property
+    @property
     def list_unsubscribe(self):
         try:
             return self.mfs['PidTagSubject']
