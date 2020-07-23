@@ -6,6 +6,10 @@ from outlook_msg.attachment import Attachment
 class Message:
     def __init__(self, fp):
         self.mfs = MessageFileStorage.from_file(fp)
+        
+    @property
+    def receiver_email(self):
+        return self.mfs['PidTagReceivedByEmailAddress']
 
     @property
     def sender_email(self):
@@ -18,14 +22,14 @@ class Message:
     @property
     def list_unsubscribe(self):
         try:
-            return self.mfs['PidTagSubject']
+            return self.mfs['PidTagListUnsubscribe']
         except KeyError:
             return 0
     
 
     @property
     def body(self):
-        return self.mfs['PidTagListUnsubscribe']
+        return self.mfs['PidTagBody']
 
     @property
     def has_attachments(self):
