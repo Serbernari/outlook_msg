@@ -14,10 +14,18 @@ class Message:
     @property
     def subject(self):
         return self.mfs['PidTagSubject']
+    
+      @property
+    def list_unsubscribe(self):
+        try:
+            return self.mfs['PidTagSubject']
+        except KeyError:
+            return 0
+    
 
     @property
     def body(self):
-        return self.mfs['PidTagBody']
+        return self.mfs['PidTagListUnsubscribe']
 
     @property
     def has_attachments(self):
