@@ -7,10 +7,10 @@ class Message:
     def __init__(self, fp):
         self.mfs = MessageFileStorage.from_file(fp)
         
-#     @property
-#     def receiver_email(self):
-#         return self.mfs['PidTagReceivedByEmailAddress']
-
+    @property
+    def get_mfs(self):
+        return self.mfs
+    
     @property
     def sender_email(self):
         return self.mfs['PidTagSenderEmailAddress']
