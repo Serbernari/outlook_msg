@@ -15,7 +15,7 @@ which none of this would be possible.
 
 Install using pip:
  
-`pip install outlook_msg`
+`pip install git+https://github.com/Serbernari/outlook_msg`
  
 ## Usage
 
