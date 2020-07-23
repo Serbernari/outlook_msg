@@ -7,9 +7,9 @@ class Message:
     def __init__(self, fp):
         self.mfs = MessageFileStorage.from_file(fp)
         
-    @property
-    def receiver_email(self):
-        return self.mfs['PidTagReceivedByEmailAddress']
+#     @property
+#     def receiver_email(self):
+#         return self.mfs['PidTagReceivedByEmailAddress']
 
     @property
     def sender_email(self):
